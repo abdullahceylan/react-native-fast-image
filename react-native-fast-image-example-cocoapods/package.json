@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "react": "16.5.0",
-    "react-native": "0.57.1",
+    "react-native": "0.60.0",
     "react-native-fast-image": "^5.0.9",
     "react-native-image-picker": "^0.26.10",
     "react-native-image-progress": "^1.1.1",
@@ -16,7 +18,8 @@
     "react-native-vector-icons": "^5.0.0",
     "react-navigation": "^2.16.0",
     "react-timeout": "^1.1.2",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
@@ -26,5 +29,6 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "snyk": true
 }
